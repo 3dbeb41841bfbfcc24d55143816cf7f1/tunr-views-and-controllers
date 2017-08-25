@@ -1,0 +1,12 @@
+<h1>Artists <a href="/artists/new">(+)</a></h1>
+
+<ul>
+  <% @artists.each do |artist| %>
+    <li>
+      <a href="/artists/<%= artist.id %>">
+        <%= artist.name %>
+      </a>
+      <%= button_to "delete", artist, :method => :delete %>
+    </li>
+  <% end %>
+</ul>

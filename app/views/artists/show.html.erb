@@ -1,0 +1,4 @@
+<h1><%= @artist.name %></h1>
+<a href="/artists/<%= @artist.id%>/edit">Edit</a>
+<%= image_tag @artist.photo_url, {height: '320', width: '320', class: "class-name"} %>
+<h3><%= @artist.nationality %></h3>
