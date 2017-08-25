@@ -3,12 +3,12 @@
 
 <%= image_tag @artist.photo_url, class: "artist-photo" %>
 
-<h3>Songs <%= link_to "(+)", new_song_path %></h3>
+<h3>Songs <%= link_to "(+)", new_artist_song_path(@artist.id) %></h3>
 
 <ul>
   <% @artist.songs.each do |song| %>
     <li>
-      <%= link_to "#{song.title} (#{song.album})", song %>
+      <%= link_to "#{song.title} (#{song.album})", artist_song_path(@artist.id, song.id) %>
     </li>
   <% end %>
 </ul>
